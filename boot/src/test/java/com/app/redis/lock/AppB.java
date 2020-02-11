@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
  */
 public class AppB {
     public static void main(String[] args){
-        RedisWithReentrantLock lock = new RedisWithReentrantLock("lock");
+        RedisWithLock lock = new RedisWithLock("lock");
         ExecutorService pool = Executors.newFixedThreadPool(2);
         pool.submit(new Runnable() {
             @Override
@@ -22,7 +22,7 @@ public class AppB {
                 lock.lock();
                 try {
                     System.out.println("appB thread1 lock :"+DateUtils.format(System.currentTimeMillis()));
-                    Thread.sleep(30000);
+                    Thread.sleep(3000);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
@@ -37,7 +37,7 @@ public class AppB {
                 lock.lock();
                 try {
                     System.out.println("appB thread2 lock :"+DateUtils.format(System.currentTimeMillis()));
-                    Thread.sleep(30000);
+                    Thread.sleep(3000);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
