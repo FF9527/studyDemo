@@ -1,4 +1,4 @@
-package com.app.study.classLoader;
+package com.app.classLoader;
 
 /**
  * @author:wuqi

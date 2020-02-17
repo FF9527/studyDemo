@@ -1,4 +1,4 @@
-package com.app.cglib;
+package com.app.proxy;
 
 import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.cglib.proxy.Enhancer;
