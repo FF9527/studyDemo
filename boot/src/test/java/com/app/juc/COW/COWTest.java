@@ -1,4 +1,4 @@
-package com.app.concurrent.COW;
+package com.app.juc.COW;
 
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;

@@ -1,11 +1,8 @@
-package com.app.concurrent.LockSupport;
+package com.app.juc.LockSupport;
 
 import org.junit.Test;
 
 import java.util.Date;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.LockSupport;
 
 /**

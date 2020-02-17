@@ -1,4 +1,4 @@
-package com.app.concurrent.aqs;
+package com.app.juc.aqs;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;

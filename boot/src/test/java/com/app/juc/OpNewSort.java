@@ -1,4 +1,4 @@
-package com.app.concurrent;
+package com.app.juc;
 
 /**
  * @author:wuqi

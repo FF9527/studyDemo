@@ -1,4 +1,4 @@
-package com.app.concurrent.queue;
+package com.app.juc.queue;
 
 import java.util.Random;
 import java.util.concurrent.DelayQueue;

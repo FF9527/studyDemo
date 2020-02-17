@@ -1,4 +1,4 @@
-package com.app.concurrent.aqs;
+package com.app.juc.aqs;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;

@@ -1,4 +1,4 @@
-package com.app.concurrent.LockSupport;
+package com.app.juc.LockSupport;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;

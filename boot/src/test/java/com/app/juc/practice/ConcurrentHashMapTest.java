@@ -1,6 +1,5 @@
-package com.app.concurrent.practice;
+package com.app.juc.practice;
 
-import netscape.javascript.JSObject;
 import org.junit.Test;
 
 import java.util.List;

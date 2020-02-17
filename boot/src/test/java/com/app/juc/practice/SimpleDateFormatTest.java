@@ -1,4 +1,4 @@
-package com.app.concurrent.practice;
+package com.app.juc.practice;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
