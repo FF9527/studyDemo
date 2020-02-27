@@ -13,6 +13,7 @@ import java.sql.Statement;
  */
 public class JDBCTest {
 
+
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mcip:3306/mysql","root","123456");
