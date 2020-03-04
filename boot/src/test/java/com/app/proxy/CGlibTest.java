@@ -15,32 +15,26 @@ import java.lang.reflect.Method;
  */
 public class CGlibTest {
 
-    static class Hello{
-        public void hello(){
-            System.out.println("hello world");
-        }
-        public void sayHello1() {
-            System.out.println("hello world1");
-        }
-    }
-
-
     public static void main(String[] args){
         System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "D:\\myGItHub\\springBootDemo\\com\\sun\\proxy");
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(Hello.class);
+        Hello target = new Hello();
         enhancer.setCallback(new MethodInterceptor() {
             @Override
             public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
                 System.out.println("before method run...");
-                Object result = methodProxy.invokeSuper(o, objects);
+                //这样实现代理对象都没有
+                //Object result = methodProxy.invokeSuper(o, objects);
+                Object result = methodProxy.invoke(target,objects);
                 System.out.println("after method run...");
                 return result;
             }
         });
-        Hello hello = (Hello) enhancer.create();
-        //test.test();
-        System.out.println("proxy.toString:"+hello.toString());//proxy.toString:com.app.proxy.Hello@eed1f14
-        System.out.println("proxy.hashCode:"+hello.hashCode());//proxy.hashCode:250421012
+        Hello proxy = (Hello) enhancer.create();
+        System.out.println("proxy.toString:"+proxy.toString());//proxy.toString:com.app.proxy.Hello@2437c6dc
+        System.out.println("proxy.hashCode:"+proxy.hashCode());//proxy.hashCode:607635164
+        System.out.println("target.hashCode:"+target.hashCode());//target.hashCode:607635164
+        System.out.println("target.toString:"+target.toString());//target.toString:com.app.proxy.Hello@2437c6dc
     }
 }
