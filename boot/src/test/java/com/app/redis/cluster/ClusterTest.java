@@ -24,7 +24,7 @@ public class ClusterTest {
     }
 
     private static JedisCluster jedisCluster = null;
-    private static final String HOST = "192.168.0.114";
+    private static final String HOST = "mcip";
     static{
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(100);
@@ -48,12 +48,12 @@ public class ClusterTest {
      */
     public static void main(String[] args){
         try {
-            jedisCluster.set("linkTest","hello World");
+            /*jedisCluster.set("linkTest","hello World");
             jedisCluster.set("scanTest","hello World");
             jedisCluster.set("test","hello World");
             jedisCluster.set("test2","hello World");
             jedisCluster.set("test3","hello World");
-            System.out.println(jedisCluster.get("linkTest"));
+            System.out.println(jedisCluster.get("linkTest"));*/
             Set<String> keys = new HashSet<>();
             Map<String,JedisPool> jedisPoolMap = jedisCluster.getClusterNodes();
             for (JedisPool jedisPool : jedisPoolMap.values()) {
@@ -77,7 +77,8 @@ public class ClusterTest {
                     }
                 }
             }
-            System.out.println(keys);
+            keys.forEach(key->jedisCluster.del(key));
+//            System.out.println(keys);
         }finally {
             close();
         }
