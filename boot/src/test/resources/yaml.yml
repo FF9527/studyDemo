@@ -1,0 +1,38 @@
+#yaml文件是一个标记文件
+
+###### yaml语法 #####
+# ①大小写敏感
+# ②使用缩进表示层级关系
+# ③缩进不许使用Tab，只允许空格
+# ④缩进的空格数不重要，只需要相同层级元素左对齐即可
+# ⑤ #表示注释 （皮一下很开心）
+
+##### yaml数据类型 #####
+# ①字面量
+# ②对象(Map)
+# ③数组（list）
+
+##### ymal例子 #####
+#字面量
+String:
+  - hello world
+  - hello yaml
+  - hello springboot
+#对象+Map
+user: &bohu
+  userId: 9527
+  userName: tangbohu
+#数组+list
+userIds:
+  - 9527
+  - 1234
+
+##### yaml引用 #####
+# '&'：锚点
+# '*'：别名
+maid: &qiuxiang
+  maidId: 1
+  maidName: qiuxiang
+couple:
+  <<: *bohu
+  <<: *qiuxiang

@@ -1,0 +1,59 @@
+{
+  "groups": [
+  {
+    "name": "personproperty",
+    "type": "com.app.test.yaml.PersonProperty",
+    "sourceType": "com.app.test.yaml.PersonProperty"
+  }
+  ],
+  "properties": [
+    {
+      "name": "personproperty.userId",
+      "type": "java.lang.Long",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": 9527
+    },
+    {
+      "name": "personproperty.userName",
+      "type": "java.lang.String",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": "tang bo hu"
+    },
+    {
+      "name": "personproperty.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": true
+    },
+    {
+      "name": "personproperty.birth",
+      "type": "java.util.Date",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": "777/7/7"
+    },
+    {
+      "name": "personproperty.map.girlFriend",
+      "type": "java.lang.String",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": "qiu xiang"
+    },
+    {
+      "name": "personproperty.list",
+      "type": "java.util.List",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": "qin,qi,shu,hua"
+    },
+    {
+      "name": "personproperty.dog.dogName",
+      "type": "java.lang.String",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": "wang cai"
+    },
+    {
+      "name": "personproperty.dog.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.app.test.yaml.PersonProperty",
+      "defaultValue": 3
+    }
+  ]
+}

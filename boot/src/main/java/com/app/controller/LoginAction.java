@@ -1,5 +1,7 @@
 package com.app.controller;
 
+import com.app.test.yaml.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,11 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @description:com.app.controller
  * @version:1.0
  */
-@RestController(value = "/login")
+@RestController
 public class LoginAction {
+
+    @Autowired
+    private Person person;
 
     @RequestMapping("/")
     public void login(){
 
+    }
+
+    @RequestMapping("/hello")
+    public Person name(){
+        System.out.println(person);
+        return person;
     }
 }
